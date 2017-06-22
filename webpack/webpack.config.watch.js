@@ -10,7 +10,7 @@ module.exports = {
         pathinfo: true,
         publicPath: config.proxyUrl + config.publicPath,
     },
-    devtool: '#cheap-module-source-map',
+    // devtool: '#cheap-module-source-map',
     stats: false,
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
@@ -21,7 +21,7 @@ module.exports = {
                 target,
                 proxyUrl: config.proxyUrl,
                 watch: config.watch,
-                delay: 500,
+                delay: 5000,
             }
         ),
     ],
