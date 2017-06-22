@@ -5,11 +5,11 @@
     ]
   },
   "project": "mizplate",
-  "publicPath": "/app/themes/sage",
+  "publicPath": "/wp-content/plugins/mizplate-core",
   "devUrl": "http://plugins.dev",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
-    "{app,resources/views}/**/*.php"
+    "{includes,templates}/**/*.php"
   ]
 }
