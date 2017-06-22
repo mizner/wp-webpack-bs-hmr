@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const {resolve} = require('path');
 const merge = require('webpack-merge');
-const config = require('./config.json');
+const config = require('./config');
 const APP_DIR = resolve(__dirname, 'src');
 const BUILD_DIR = resolve(__dirname, 'dist');
 
@@ -12,8 +12,7 @@ let webpackConfig = {
     output: {
         filename: config.project + '.min.js',
         path: BUILD_DIR,
-        publicPath: '/',
-        // pathinfo: true,
+        publicPath: config.publicPath,
     },
     stats: false,
     plugins: [
