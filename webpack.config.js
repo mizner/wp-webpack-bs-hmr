@@ -20,8 +20,8 @@ let webpackConfig = {
     ],
 };
 
-webpackConfig.entry = require('./webpack/util/addHotMiddleware')(webpackConfig.entry);
-webpackConfig = merge(webpackConfig, require('./webpack/webpack.config.watch'));
+webpackConfig.entry = require('./build/util/addHotMiddleware')(webpackConfig.entry);
+webpackConfig = merge(webpackConfig, require('./build/webpack.config.watch'));
 
 module.exports = webpackConfig;
 

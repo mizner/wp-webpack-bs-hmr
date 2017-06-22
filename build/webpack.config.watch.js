@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const BrowserSyncPlugin = require('browsersync-webpack-plugin');
 
-const config = require('../config');
+const config = require('./config');
 
 const target = config.devUrl;
 
@@ -13,9 +13,9 @@ module.exports = {
     // devtool: '#cheap-module-source-map',
     stats: false,
     plugins: [
-        new webpack.optimize.OccurrenceOrderPlugin(),
+        // new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin(),
+        // new webpack.NoEmitOnErrorsPlugin(),
         new BrowserSyncPlugin(
             {
                 target,
